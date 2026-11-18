@@ -2,7 +2,7 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-title: The Society of Infrastructure # the website title (if blank, full name will be used instead)
+title: Society of Infrastructure # the website title (if blank, full name will be used instead)
 first_name: Gibson
 middle_name: O.
 last_name: Ekezie
@@ -134,7 +134,7 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: The Society Of Infrastructure # blog_name will be displayed in your blog page
+blog_name: Society Of Infra # blog_name will be displayed in your blog page
 blog_description: It is a myth -- widely believed but not less mythical for that -- that people are most creative when they are most free. -- Herbert Simon.
 permalink: /blog/:year/:title/
 future: true

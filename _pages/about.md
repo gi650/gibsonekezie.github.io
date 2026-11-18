@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /gibson
-subtitle: be curious... not judgemental
+subtitle: Build with manly gustoo!
 nav: true
 nav_order: 8
 profile:

@@ -135,7 +135,7 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # -----------------------------------------------------------------------------
 
 blog_name: Society Of Infra # blog_name will be displayed in your blog page
-blog_description: \"It is a myth -- widely believed but not less mythical for that -- that people are most creative when they are most free.\" Herbert Simon
+blog_description: "It is a myth -- widely believed but not less mythical for that -- that people are most creative when they are most free. -- Herbert Simon"
 permalink: /blog/:year/:title/
 future: true
 lsi: false # produce an index for related posts

@@ -1,9 +1,10 @@
 ---
 layout: about
 title: about
-permalink: /
+permalink: /gibson
 subtitle: be curious... not judgemental
-
+nav: true
+nav_order: 8
 profile:
   align: right
   image: prof_pic.jpg
@@ -13,15 +14,16 @@ profile:
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: false # includes social icons at the bottom of the page
 
+
 # announcements:
 #   enabled: true # includes a list of news items
 #   scrollable: true # adds a vertical scroll bar if there are more than 3 news items
 #   limit: 5 # leave blank to include all the news in the `_news` folder
 
-latest_posts:
-  enabled: true
-  scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
-  limit: 3 # leave blank to include all the blog posts
+# latest_posts:
+#   enabled: true
+#   scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
+#   limit: 3 # leave blank to include all the blog posts
 ---
 
 Hello.. I'm an `Infrastructure Engineer` that works broadly on areas of cloud computing. I have solid foundations in cloud security, kubernetes, Devops Practices, networking, linux kernel and architecting scalable applications. I enjoy figuring out how softwares works and not just on the infrastructure layer but also at the application layer.
@@ -30,5 +32,3 @@ I'm really passionate about learning new technologies. For reall.. I'm the guy t
 
 We are in exciting times with growth of AI/ML technologies and the boundaries of what agentic AI systems can do will continuously be pushed but at the sametime I feel the integration of security guardrails should be prioritized to ensure safety users. I'm a huge fan of [Software Should Work](https://softwareshould.work/){:target="_blank"}, you should watch this amazing Talk [Don't Take The Black Pill](https://www.youtube.com/watch?v=zLZwpH5lCD4&list=PLYHMN-0pC7n8){:target="_blank"} by `Andrew Kelley`
 I'm also a runner, footballer and a chelsea fan who is making a lot of behind the scene efforts to delve into more literature and generally reading more books. I knowww..
-
-Feel free to reach out to talk about anything through email at `gibsonekezie@gmail.com`.

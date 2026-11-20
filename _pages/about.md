@@ -1,8 +1,8 @@
 ---
-layout: default
+layout: about
 title: about
 permalink: /
-subtitle: Infra guy building agents
+subtitle: Infra guy building agentic systems
 profile:
   align: right
   image: prof_pic.jpg

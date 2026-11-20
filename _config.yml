@@ -5,7 +5,7 @@
 title: # the website title (if blank, full name will be used instead)
 first_name: Gibson
 middle_name: O.
-last_name: Ekezie
+last_name: Ekezi
 contact_note: >
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   These posts serve as a technical resource for learning and research . Based on [*The Society Of Infrastructure](https://github.com/bogoli/-folio) design.

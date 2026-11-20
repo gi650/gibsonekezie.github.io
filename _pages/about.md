@@ -1,16 +1,15 @@
 ---
 layout: about
-title: about
-permalink: /gibson
+title: Gibson
+permalink: /
 subtitle:
-nav: true
-nav_order: 8
 profile:
   align: right
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
 
+latest_posts: true
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: false # includes social icons at the bottom of the page
 

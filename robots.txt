@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://gi650.github.io/sitemap.xml
+Sitemap: https://gibsonekezie.github.io/sitemap.xml

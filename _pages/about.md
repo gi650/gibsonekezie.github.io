@@ -1,6 +1,6 @@
 ---
 layout: about
-title: Gibson
+title: about
 permalink: /
 subtitle:
 profile:
@@ -25,7 +25,7 @@ latest_posts:
 ---
 
 Hello..
-I'm Gibson an `Infrastructure Engineer` that works broadly on areas of cloud computing. I have solid foundations in cloud security, kubernetes, Devops Practices, networking, linux kernel and architecting scalable applications. I enjoy figuring out how softwares works and not just on the infrastructure layer but also at the application layer.
+I'm an `Infrastructure Engineer` that works broadly on areas of cloud computing. I have solid foundations in cloud security, kubernetes, Devops Practices, networking, linux kernel and architecting scalable applications. I enjoy figuring out how softwares works and not just on the infrastructure layer but also at the application layer.
 
 I'm really passionate about learning new technologies. For reall.. I'm the guy that's always ready when it comes to learning something new. Right now I'm focused on `Agentic systems` and `AI agent development` which is an intersection of `high-performance ML systems`, `cloud infrastructure`, and robust `AI Safety & governance`. I'm intrigued by systems behind distributed pre-training & Inferencing like llm-d, inference gateway and vllm.
 

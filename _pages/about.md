@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /gibson
-subtitle: Build with manly gustoo!
+subtitle:
 nav: true
 nav_order: 8
 profile:

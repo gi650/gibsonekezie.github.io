@@ -146,6 +146,7 @@ The clear distinction between coroutine object (synonymous to coroutine) and cor
 | Coroutine object   | A pauseable execution frame/object | Call coro = work()          | inspect.iscoroutine(coro) -> True.        | Single-use; must be awaited or scheduled |
 
 Coroutines evolve from generators. Similar to coroutines functions, calling a generator function does not run it, it generates a generator object. Yield expressions and statements are only used when defining generator functions and are only in the body of a generator function. From this you can infer that the difference between a regular function and a generator function is the presence of yield expressions.
-_for more information on the history of coroutines I suggest you check out Lukasz Langa video from EdgeDB [Import Asyncio](https://www.youtube.com/watch?v=Xbl7XjFYsN4&list=PLhNSoGM2ik6SIkVGXWBwerucXjgP1rHmB&index=1)_
+
+_For more information on the history of coroutines I suggest you check out Lukasz Langa video from EdgeDB [Import Asyncio](https://www.youtube.com/watch?v=Xbl7XjFYsN4&list=PLhNSoGM2ik6SIkVGXWBwerucXjgP1rHmB&index=1)_
 
 ## Task

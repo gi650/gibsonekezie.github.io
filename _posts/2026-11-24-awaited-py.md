@@ -108,8 +108,7 @@ ready_player_two()
 
 Asyncio is a standard library framework for writing concurrent code in python. The main function of asyncio is to maximize usage of a single thread by handling I/O asynchronously and enabling concurrent code execution using coroutines. Another way to think of it is asyncio pads the gaps in a running thread with other concurrent tasks.
 
-Now if you take a min to digest what you just read about a asyncio; you'll come up with similar questions like _How ?_ **How does asyncio perform this ?**
-**what powers the asyncio framework ?**
+Now if you take a min to digest what you just read about a asyncio; you'll come up with similar questions like _How ? How does asyncio perform this ? what powers the asyncio framework ?_
 This simple answer to both questions is **EVENT LOOP**
 
 ## Event Loop

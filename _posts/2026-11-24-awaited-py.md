@@ -1,6 +1,6 @@
 ---
 layout: distill
-title: The Awaited of Art of Async Programming in Python
+title: The Awaited Art of Async Programming in Python
 description: blog post to help understand asyncio
 tags: distill formatting
 giscus_comments: false
@@ -52,7 +52,7 @@ toc:
   - name: Reference
 ---
 
-**The Awaited of Art of Async Programming in Python**
+**The Awaited Art of Async Programming in Python**
 
 The goal of this post is to get a strong mental model of asyncio.
 This post is going to be legend .. a..

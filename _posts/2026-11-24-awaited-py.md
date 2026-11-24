@@ -44,7 +44,7 @@ toc:
   - name: Reference
 ---
 
-**The Awaited Art of Async Programming in Python**
+**Async Programming in Python 101**
 
 The goal of this article is to help you build a strong mental model of asyncio.
 
@@ -62,7 +62,7 @@ Let’s start by differentiating between synchronous code execution from asynchr
 
 I want you to think of the difference this way, synchronous code execution is the basic python code execution we are familiar with. This means code executes in a strict sequence and the running code blocks everything else until completion (blocking behavior);
 
-Example of Basic Python Function (Synchronous Code)
+**Example of Basic Python Function (Synchronous Code)**
 
 {::nomarkdown}
 {% assign jupyter_path = 'assets/jupyter/posts/awaited/sync.ipynb' | relative_url %}
@@ -77,7 +77,7 @@ Example of Basic Python Function (Synchronous Code)
 While for asynchronous code execution .. ?
 You guessed correctly! Asynchronous code execution does the opposite. It initiates tasks and continues without waiting for completion.
 
-Example of Asynchronous code
+**Example of Asynchronous code**
 
 {::nomarkdown}
 {% assign jupyter_path = 'assets/jupyter/posts/awaited/async.ipynb' | relative_url %}
@@ -89,4 +89,4 @@ Example of Asynchronous code
 {% endif %}
 {:/nomarkdown}
 
-The Goal of Asyncio
+## The Goal of Asyncio

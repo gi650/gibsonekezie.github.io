@@ -1,22 +1,16 @@
 ---
 layout: distill
 title: The Awaited Art of Async Programming in Python
-description: blog post to help understand asyncio
-tags: distill formatting
+description: Import asyncio
+tags: Python code
 giscus_comments: false
-date: 2021-05-22
+date: 2026-11-24
 featured: true
 mermaid:
   enabled: true
   zoomable: true
 code_diff: true
-map: true
-chart:
-  chartjs: true
-  echarts: true
-  vega_lite: true
-tikzjax: true
-typograms: true
+map: false
 
 author:
   - name: Ekezie Gibson

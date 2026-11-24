@@ -42,7 +42,6 @@ toc:
       - name: Async with
       - name: Async for
       - name: Asynchronous Generators
-  - name: Reference
 ---
 
 **Async Programming in Python 101**
@@ -172,3 +171,132 @@ For awaited coroutine, unlike the awaited task the behavior of the awaited corou
 | **Overlap with caller** | None—caller waits until coro() finishes         | Can run concurrently while caller does other work before await t |
 | **Can be cancelled ?**  | Only indirectly by cancelling the awaiting task | Yes—t.cancel() can cancel the task directly                      |
 | **Best when..**         | You genuinely need the result before moving on. | You want work to start now and collect the result later          |
+
+1. Awaited Coroutine (await coro()) — Runs One After Another step_two() doesn't even start until step_one() finishes.
+
+```python
+import asyncio
+
+
+async def step_one():
+  print("Step 1: start")
+  await asyncio.sleep(1)
+  print("Step 1: done")
+
+
+async def step_two():
+  print("Step 2: start")
+  await asyncio.sleep(1)
+  print("Step 2: done")
+
+
+async def main():
+  await step_one()  # Waits ~1s before moving on
+  await step_two()  # Starts after step_one, waits ~1s
+
+
+asyncio.run(main())
+```
+
+**Output**
+
+```python
+Step 1: start
+Step 1: done
+Step 2: start
+Step 2: done
+```
+
+2. Awaited Task (await task) — Starts Immediately, Waits Later create_task() queues both right away, await asyncio.sleep(0) lets them begin, and await on each task waits for their results.
+
+```python
+import asyncio
+
+
+async def step_one():
+  print("Step 1: start")
+  await asyncio.sleep(1)
+  print("Step 1: done")
+
+
+async def step_two():
+  print("Step 2: start")
+  await asyncio.sleep(1)
+  print("Step 2: done")
+
+
+async def main():
+  t1 = asyncio.create_task(step_one())
+  t2 = asyncio.create_task(step_two())
+
+  await asyncio.sleep(0)  # Let both tasks start on the loop
+
+  await t1  # Wait for t1
+  await t2  # Wait for t2
+
+
+asyncio.run(main())
+
+```
+
+**Output**
+
+```python
+Step 1: start
+Step 2: start
+Step 1: done
+Step 2: done
+```
+
+## Futures
+
+low-level Object meant to represent a computational status and result yet to come. (does not perform the actual computation, just the result of the computation). Future can be easily infer from its name as a placeholder for result or status we don't have yet. Future has a state attribute that can be pending, cancelled or done. You can easily relate future to a traffic light.
+Future transitions to either finished with a result or finished with an exception.Future can be used directly to make your own custom conditions for waiting and resuming.
+
+**Interesting Side Note**
+It is actually the future class that implements the logic of storing callbacks referenced in task. The task just inherits it. Asyncio.Task subclasses asyncio.Future in other to gain these capabilities.
+
+There a diagram of the awaitable Family Tree
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/post/awaited/awfamily.png" class="img-fluid z-depth-1" zoomable=true %}
+    </div>
+</div>
+_Note: This digram was gotten from Lukasz Langa's video series from EdgeDB [Import Asyncio](https://www.youtube.com/playlist?list=PLhNSoGM2ik6SIkVGXWBwerucXjgP1rHmB)_
+
+## Async Code Support
+
+Async code support are async features for async programming like async with, async for and async generators
+
+### Async with
+
+async with is the asynchronous context manager (the async version of with). It awaits setup (**aenter**) when entering the block and awaits cleanup (**aexit**) when exiting—even if an exception occurs.
+
+Why use it: Safely manage resources whose opening or closing involves async I/O, such as HTTP sessions, database connections, locks, or async file handles.
+
+Key detail: Must be used inside an async def function, and the object must implement **aenter** and **aexit**.
+
+### Async for
+
+async for is the asynchronous loop used to iterate over an async iterable (such as an async generator). At each step, it awaits the next item so the event loop can run other tasks while waiting.
+
+Why use it: Process items as they arrive asynchronously without blocking the event loop.
+
+Key detail: Must be used inside an async def function.
+
+### Async Generators( The Big Bad Wolf)
+
+A function that looks like a coroutine but contains yield expressions.
+An async generator is a function defined with async def that uses yield instead of return. Calling it returns an async generator object that can await async operations between yielding values.
+
+Why use it: Stream items lazily over time (like paginated API responses, log lines, or WebSocket messages) without waiting for—or loading—the entire dataset upfront.
+
+Key detail: Unlike regular generators, you don't advance them with next()—you consume them with async for (or anext()).
+
+**NOTE:**
+If this picked your interest and you want to go deeper, below is a list of really good resources that can help you
+
+_Lukasz Langa's video series from EdgeDB [Import Asyncio](https://www.youtube.com/playlist?list=PLhNSoGM2ik6SIkVGXWBwerucXjgP1rHmB)_
+[Conceptual overview of Asyncio](https://docs.python.org/3/howto/a-conceptual-overview-of-asyncio.html)
+[Official Documentation](https://docs.python.org/3/library/asyncio.html#module-asyncio)

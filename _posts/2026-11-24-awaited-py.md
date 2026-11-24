@@ -5,7 +5,7 @@ description: Import asyncio
 tags: Python code
 giscus_comments: false
 date: 2026-11-24
-featured: true
+featured: false
 mermaid:
   enabled: true
   zoomable: true
@@ -14,7 +14,7 @@ map: false
 
 author:
   - name: Ekezie Gibson
-    url: "https://en.wikipedia.org/wiki/Albert_Einstein"
+    url: "https://www.gibsonekezie.com"
     affiliations:
       name: IAS, Princeton
 
@@ -48,8 +48,9 @@ toc:
 
 **The Awaited Art of Async Programming in Python**
 
-The goal of this post is to get a strong mental model of asyncio.
-This post is going to be legend .. a..
+The goal of this article is to help you build a strong mental model of asyncio.
+
+It's going to be legend .. a..
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/post/awaited/wait-for-it-barney-stinson.gif" class="img-fluid z-depth-1" zoomable=true %}
@@ -61,7 +62,7 @@ Let’s start by differentiating between synchronous code execution from asynchr
 
 ## Difference between Synchronous Code Execution and Asynchronous Code Execution
 
-Synchronous code execution is the basic python code execution we are familiar with. It means code execute in a strict sequence and the running code blocks everything else until completion (blocking behavior);
+I want you to think of the difference this way, synchronous code execution is the basic python code execution we are familiar with. This means code executes in a strict sequence and the running code blocks everything else until completion (blocking behavior);
 Example of Basic Python Function (Synchronous Code)
 
 While for asynchronous code execution .. ?

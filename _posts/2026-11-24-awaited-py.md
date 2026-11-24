@@ -50,7 +50,11 @@ toc:
 
 The goal of this post is to get a strong mental model of asyncio.
 This post is going to be legend .. a..
-![wait for it](assets/img/post/awaited/wait-for-it-barney-stinson.gif)
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/post/awaited/wait-for-it-barney-stinson.gif" class="img-fluid z-depth-1" zoomable=true %}
+    </div>
+</div>
 ryy!!
 
 Let’s start by differentiating between synchronous code execution from asynchronous code execution

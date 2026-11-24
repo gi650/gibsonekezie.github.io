@@ -3,7 +3,7 @@ layout: distill
 title: The Awaited of Art of Async Programming in Python
 description: blog post to help understand asyncio
 tags: distill formatting
-giscus_comments: true
+giscus_comments: false
 date: 2021-05-22
 featured: true
 mermaid:

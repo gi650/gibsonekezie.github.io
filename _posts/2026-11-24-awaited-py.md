@@ -2,7 +2,7 @@
 layout: distill
 title: The Awaited Art of Async Programming in Python
 description: Import asyncio
-tags: Python code jupyter
+tags: Python code formatting jupyter
 giscus_comments: false
 date: 2026-11-24
 featured: false

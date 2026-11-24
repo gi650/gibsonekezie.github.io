@@ -63,7 +63,6 @@ Let’s start by differentiating between synchronous code execution from asynchr
 I want you to think of the difference this way, synchronous code execution is the basic python code execution we are familiar with. This means code executes in a strict sequence and the running code blocks everything else until completion (blocking behavior);
 
 Example of Basic Python Function (Synchronous Code)
-{% raw %}
 
 {::nomarkdown}
 {% assign jupyter_path = 'assets/jupyter/posts/awaited/sync.ipynb' | relative_url %}
@@ -75,13 +74,10 @@ Example of Basic Python Function (Synchronous Code)
 {% endif %}
 {:/nomarkdown}
 
-{% endraw %}
-
 While for asynchronous code execution .. ?
 You guessed correctly! Asynchronous code execution does the opposite. It initiates tasks and continues without waiting for completion.
 
 Example of Asynchronous code
-{% raw %}
 
 {::nomarkdown}
 {% assign jupyter_path = 'assets/jupyter/posts/awaited/async.ipynb' | relative_url %}
@@ -93,5 +89,4 @@ Example of Asynchronous code
 {% endif %}
 {:/nomarkdown}
 
-{% endraw %}
 The Goal of Asyncio

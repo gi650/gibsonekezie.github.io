@@ -55,7 +55,7 @@ toc:
 **The Awaited of Art of Async Programming in Python**
 
 The goal of this post is to get a strong mental model of asyncio.
-This post is going to be legenddda.. wait for it
+This post is going to be legend .. a..
 ![wait for it](assets/img/post/awaited/wait-for-it-barney-stinson.gif)
 ryy!!
 

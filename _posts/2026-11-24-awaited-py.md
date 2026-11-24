@@ -56,7 +56,7 @@ It's going to be legend .. a..
 </div>
 ryy!!
 
-Let’s start by differentiating between synchronous code execution from asynchronous code execution
+Let’s start by differentiating synchronous code execution from asynchronous code execution
 
 ## Difference between Synchronous Code Execution and Asynchronous Code Execution
 

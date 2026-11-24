@@ -65,17 +65,15 @@ I want you to think of the difference this way, synchronous code execution is th
 Example of Basic Python Function (Synchronous Code)
 {% raw %}
 
-```liquid
 {::nomarkdown}
 {% assign jupyter_path = 'assets/jupyter/posts/awaited/sync.ipynb' | relative_url %}
 {% capture notebook_exists %}{% file_exists assets/jupyter/posts/awaited/sync.ipynb %}{% endcapture %}
 {% if notebook_exists == 'true' %}
-  {% jupyter_notebook jupyter_path %}
+{% jupyter_notebook jupyter_path %}
 {% else %}
   <p>Sorry, the notebook you are looking for does not exist.</p>
 {% endif %}
 {:/nomarkdown}
-```
 
 {% endraw %}
 
@@ -85,17 +83,15 @@ You guessed correctly! Asynchronous code execution does the opposite. It initiat
 Example of Asynchronous code
 {% raw %}
 
-```liquid
 {::nomarkdown}
 {% assign jupyter_path = 'assets/jupyter/posts/awaited/async.ipynb' | relative_url %}
 {% capture notebook_exists %}{% file_exists assets/jupyter/posts/awaited/async.ipynb %}{% endcapture %}
 {% if notebook_exists == 'true' %}
-  {% jupyter_notebook jupyter_path %}
+{% jupyter_notebook jupyter_path %}
 {% else %}
   <p>Sorry, the notebook you are looking for does not exist.</p>
 {% endif %}
 {:/nomarkdown}
-```
 
 {% endraw %}
 The Goal of Asyncio

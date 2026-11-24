@@ -297,6 +297,6 @@ Key detail: Unlike regular generators, you don't advance them with next()—you 
 **NOTE:**
 If this picked your interest and you want to go deeper, below is a list of really good resources that can help you
 
-_Lukasz Langa's video series from EdgeDB [Import Asyncio](https://www.youtube.com/playlist?list=PLhNSoGM2ik6SIkVGXWBwerucXjgP1rHmB)_
-[Conceptual overview of Asyncio](https://docs.python.org/3/howto/a-conceptual-overview-of-asyncio.html)
-[Official Documentation](https://docs.python.org/3/library/asyncio.html#module-asyncio)
+- _Lukasz Langa's video series from EdgeDB [Import Asyncio](https://www.youtube.com/playlist?list=PLhNSoGM2ik6SIkVGXWBwerucXjgP1rHmB)_
+- _[Conceptual overview of Asyncio](https://docs.python.org/3/howto/a-conceptual-overview-of-asyncio.html)_
+- _[Official Documentation](https://docs.python.org/3/library/asyncio.html#module-asyncio)_

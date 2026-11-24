@@ -1,7 +1,7 @@
 ---
 layout: distill
 title: The Awaited of Art of Async Programming in Python
-description: an example of a distill-style blog post and main elements
+description: blog post to help understand asyncio
 tags: distill formatting
 giscus_comments: true
 date: 2021-05-22

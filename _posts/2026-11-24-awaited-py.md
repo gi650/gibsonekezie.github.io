@@ -30,7 +30,7 @@ toc:
     # subsections:
     #   - name: Example Child Subsection 1
     #   - name: Example Child Subsection 2
-  - name: Goal of Asyncio
+  - name: The Goal of Asyncio
   - name: Async Function
   - name: Coroutines
   - name: Task
@@ -48,13 +48,13 @@ toc:
 
 The goal of this article is to help you build a strong mental model of asyncio.
 
-It's going to be legend .. a..
+It's going to be **legend .. a..**
 <div class="row mt-3">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/post/awaited/wait-for-it-barney-stinson.gif" class="img-fluid z-depth-1" zoomable=true %}
     </div>
 </div>
-ryy!!
+**ryy!!**
 
 Let’s start by differentiating synchronous code execution from asynchronous code execution
 
@@ -74,7 +74,7 @@ I want you to think of the difference this way, synchronous code execution is th
 {% endif %}
 {:/nomarkdown}
 
-When you call the function you just created it performs the print function;
+When you call the function you just created it executes the print function;
 
 ```python
 ready_player_one()

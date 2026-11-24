@@ -76,8 +76,7 @@ I want you to think of the difference this way, synchronous code execution is th
 
 When you call the function you just created it performs the print function;
 
-```
-python
+```python
 ready_player_one()
 This player exists in virtual world that is under attack by robots
 ```
@@ -97,8 +96,7 @@ You guessed correctly! Asynchronous code execution does the opposite. It initiat
 {% endif %}
 {:/nomarkdown}
 
-```
-python
+```python
 ready_player_two()
 <coroutine object ready_player_two at 0x105e16680>
 ```

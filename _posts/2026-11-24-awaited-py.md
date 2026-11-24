@@ -74,6 +74,14 @@ I want you to think of the difference this way, synchronous code execution is th
 {% endif %}
 {:/nomarkdown}
 
+When you call the function you just created it performs the print function;
+
+```
+python
+ready_player_one()
+This player exists in virtual world that is under attack by robots
+```
+
 While for asynchronous code execution .. ?
 You guessed correctly! Asynchronous code execution does the opposite. It initiates tasks and continues without waiting for completion.
 
@@ -88,5 +96,11 @@ You guessed correctly! Asynchronous code execution does the opposite. It initiat
   <p>Sorry, the notebook you are looking for does not exist.</p>
 {% endif %}
 {:/nomarkdown}
+
+```
+python
+ready_player_two()
+<coroutine object ready_player_two at 0x105e16680>
+```
 
 ## The Goal of Asyncio

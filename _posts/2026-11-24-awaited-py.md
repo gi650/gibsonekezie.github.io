@@ -142,11 +142,33 @@ The clear distinction between coroutine object (synonymous to coroutine) and cor
 | **Term**           | **What it is**                     | **How you get it**          | **How you inspect it**                    | **Lifecycle**                            |
 | ------------------ | ---------------------------------- | --------------------------- | ----------------------------------------- | ---------------------------------------- |
 | Coroutine function | An async def function definition   | Write async def work(): ... | inspect.iscoroutinefunction(work) -> True | Reusable callable; called many times     |
-| ---                | ---                                | ---                         | ---                                       |
+| ---                | ---                                | ---                         | ---                                       |                                          |
 | Coroutine object   | A pauseable execution frame/object | Call coro = work()          | inspect.iscoroutine(coro) -> True.        | Single-use; must be awaited or scheduled |
 
-Coroutines evolve from generators. Similar to coroutines functions, calling a generator function does not run it, it generates a generator object. Yield expressions and statements are only used when defining generator functions and are only in the body of a generator function. From this you can infer that the difference between a regular function and a generator function is the presence of yield expressions.
+Coroutines evolve from generators. Similar to coroutines functions, calling a generator function does not run it, it generates a generator object. Yield expressions and statements are only used when defining generator functions and are only in the body of a generator function. From this you can infer that the difference between a regular function and a generator function is the presence of yield expressions. If you yield directly within a coroutine function the coroutine function becomes an async generator function. "Yield from" is not allowed in coroutines, it creates a syntax error.
 
-_For more information on the history of coroutines I suggest you check out Lukasz Langa video from EdgeDB [Import Asyncio](https://www.youtube.com/watch?v=Xbl7XjFYsN4&list=PLhNSoGM2ik6SIkVGXWBwerucXjgP1rHmB&index=1)_
+_For more information on the history of coroutines I suggest you check out Lukasz Langa's video from EdgeDB [Import Asyncio](https://www.youtube.com/watch?v=Xbl7XjFYsN4&list=PLhNSoGM2ik6SIkVGXWBwerucXjgP1rHmB&index=1)_
 
 ## Task
+
+Task is a coroutine(not a coroutine function) tied to the event loop. A task also maintains a list of callbacks functions. Creating a task automatically schedules it for execution by adding a callback to run it, in the event loop's (*Collection of jobs).
+This is the recommended way to create a task:
+
+```python
+asyncio.create_task()
+```
+
+A good way to think of a task is to identify it as a wrapper for coroutines. Remember a task itself is not added to the event loop only a callback to the task is added.
+
+## Await
+
+Can be used either as an awaited task or an awaited coroutine. For awaited task, the awaited task adds a callback of the original task or coroutine to the event loop.
+For awaited coroutine, unlike the awaited task the behavior of the awaited coroutine is effectively the same as calling a regular synchronous python function (Remember when I told you that not all jobs cede control back to the event loop).
+
+| **Field**               | **Awaited Coroutine**                           | **Awaited Task**                                                 |
+| ----------------------- | ----------------------------------------------- | ---------------------------------------------------------------- |
+| **Behavior**            | await coro() (Awaited Coroutine)                | t = asyncio.create_task(coro()) ... await t (Awaited Task)       |
+| **When it starts**      | Immediately upon reaching await coro()          | Scheduled on the event loop as soon as create_task() is called   |
+| **Overlap with caller** | None—caller waits until coro() finishes         | Can run concurrently while caller does other work before await t |
+| **Can be cancelled ?**  | Only indirectly by cancelling the awaiting task | Yes—t.cancel() can cancel the task directly                      |
+| **Best when..**         | You genuinely need the result before moving on. | You want work to start now and collect the result later          |

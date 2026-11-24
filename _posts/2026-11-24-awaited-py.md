@@ -96,6 +96,8 @@ You guessed correctly! Asynchronous code execution does the opposite. It initiat
 {% endif %}
 {:/nomarkdown}
 
+in this case when you try to run the async function you get this instead; you realise that calling the async function does not execute the print function but it does something else. It creates a coroutine object.
+
 ```python
 ready_player_two()
 <coroutine object ready_player_two at 0x105e16680>

@@ -2,7 +2,7 @@
 layout: distill
 title: The Awaited Art of Async Programming in Python
 description: Import asyncio
-tags: Python code
+tags: Python code jupyter
 giscus_comments: false
 date: 2026-11-24
 featured: false
@@ -15,8 +15,6 @@ map: false
 author:
   - name: Ekezie Gibson
     url: "https://www.gibsonekezie.com"
-    affiliations:
-      name: IAS, Princeton
 
 # bibliography: 2018-12-22-distill.bib
 
@@ -63,10 +61,41 @@ Let’s start by differentiating between synchronous code execution from asynchr
 ## Difference between Synchronous Code Execution and Asynchronous Code Execution
 
 I want you to think of the difference this way, synchronous code execution is the basic python code execution we are familiar with. This means code executes in a strict sequence and the running code blocks everything else until completion (blocking behavior);
+
 Example of Basic Python Function (Synchronous Code)
+{% raw %}
+
+```liquid
+{::nomarkdown}
+{% assign jupyter_path = 'assets/jupyter/posts/awaited/sync.ipynb' | relative_url %}
+{% capture notebook_exists %}{% file_exists assets/jupyter/posts/awaited/sync.ipynb %}{% endcapture %}
+{% if notebook_exists == 'true' %}
+  {% jupyter_notebook jupyter_path %}
+{% else %}
+  <p>Sorry, the notebook you are looking for does not exist.</p>
+{% endif %}
+{:/nomarkdown}
+```
+
+{% endraw %}
 
 While for asynchronous code execution .. ?
 You guessed correctly! Asynchronous code execution does the opposite. It initiates tasks and continues without waiting for completion.
-Example of Asynchronous code
 
+Example of Asynchronous code
+{% raw %}
+
+```liquid
+{::nomarkdown}
+{% assign jupyter_path = 'assets/jupyter/posts/awaited/async.ipynb' | relative_url %}
+{% capture notebook_exists %}{% file_exists assets/jupyter/posts/awaited/async.ipynb %}{% endcapture %}
+{% if notebook_exists == 'true' %}
+  {% jupyter_notebook jupyter_path %}
+{% else %}
+  <p>Sorry, the notebook you are looking for does not exist.</p>
+{% endif %}
+{:/nomarkdown}
+```
+
+{% endraw %}
 The Goal of Asyncio

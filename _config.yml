@@ -2,7 +2,7 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-title: Gibson #the website title (if blank, full name will be used instead)
+title: #the website title (if blank, full name will be used instead)
 first_name: Gibson
 middle_name: .O.
 last_name: Ekezie
@@ -181,7 +181,7 @@ related_blog_posts:
 # Giscus comments (RECOMMENDED)
 # Follow instructions on https://giscus.app/ to setup for your repo to fill out the information below.
 giscus:
-  repo: gibsonekezie/gibsonekezie.github.io
+  repo: gi650/gibsonekezie.github.io
   repo_id: # leave empty or specify your repo_id (see https://giscus.app/)
   category: Comments # name of the category under which discussions will be created
   category_id: # leave empty or specify your category_id (see https://giscus.app/)

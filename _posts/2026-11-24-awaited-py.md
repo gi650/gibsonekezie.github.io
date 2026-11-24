@@ -1,6 +1,6 @@
 ---
 layout: distill
-title: a distill-style blog post
+title: The Awaited of Art of Async Programming in Python
 description: an example of a distill-style blog post and main elements
 tags: distill formatting
 giscus_comments: true
@@ -52,15 +52,18 @@ toc:
   - name: Reference
 ---
 
-## The Awaited of Art of Async Programming in Python
+**The Awaited of Art of Async Programming in Python**
 
 The goal of this post is to get a strong mental model of asyncio.
 This post is going to be legenddda.. wait for it
 ![wait for it](assets/img/post/awaited/wait-for-it-barney-stinson.jpg)
 ryy!!
+
 Let’s start by differentiating between synchronous code execution from asynchronous code execution
-Difference between Synchronous Code Execution and Asynchronous Code Execution
-Synchronous code execution basically means the basic python code execution we are familiar with. It means code execute in a strict sequence and the running code blocks everything else until completion (blocking behavior);
+
+## Difference between Synchronous Code Execution and Asynchronous Code Execution
+
+Synchronous code execution is the basic python code execution we are familiar with. It means code execute in a strict sequence and the running code blocks everything else until completion (blocking behavior);
 Example of Basic Python Function (Synchronous Code)
 
 While for asynchronous code execution .. ?
